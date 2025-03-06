@@ -1,10 +1,12 @@
 function checkSID() {
-  let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
-    return true;
-  } else {
-    return false;
-  }
+    let sid = (document.getElementById("sid").value).trim();
+    
+    // ตรวจสอบว่ามีความยาว 10 ตัวอักษรและเป็นตัวเลขทั้งหมด
+    if (sid.length === 10 && /^[0-9]{10}$/.test(sid)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 function checkCandiNo() {
