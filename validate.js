@@ -10,12 +10,14 @@ function checkSID() {
 }
 
 function checkCandiNo() {
-  let candi = (document.getElementById("candi").value).trim();
-  if (isNaN(candi) || candi < 1) {
-    return false;
-  } else {
-    return true;
-  }
+    let candi = (document.getElementById("candi").value).trim();
+    
+    // ตรวจสอบว่าค่าเป็นตัวเลข และอยู่ในช่วง 1-10 เท่านั้น
+    if (/^[1-9]$|^10$/.test(candi)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 function validateForm(){
